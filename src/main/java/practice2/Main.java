@@ -1,5 +1,7 @@
 package practice2;
 
+import practice3.Test1;
+
 public class Main {
 
   public static void main(String[] args) {
@@ -11,5 +13,7 @@ public class Main {
     petya.print();
     kolya.setAge(25);
     kolya.print();
+
+    Test1 test1 = new Test1();
   }
 }
