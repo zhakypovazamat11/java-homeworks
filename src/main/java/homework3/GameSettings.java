@@ -4,7 +4,7 @@ public class GameSettings {
 
   static int maxPlayers;
   final String gameName;
-  int currentPlayers;
+  private int currentPlayers;
 
   GameSettings(String gameName) {
     this.gameName = gameName;
@@ -12,6 +12,10 @@ public class GameSettings {
 
   public static void setMaxPlayers(int number) {
     maxPlayers = number;
+  }
+
+  public int getCurrentPlayers() {
+    return this.currentPlayers;
   }
 
   public void addPlayer() {

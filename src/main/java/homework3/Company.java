@@ -23,5 +23,9 @@ public class Company {
     this.employeeName = employeeName;
   }
 
-  
+  public void printEmployeeInfo() {
+    System.out.println(
+        "employeeID:" + employeeID + "employeeName: " + getEmployeeName() + "company name: "
+            + companyName);
+  }
 }
