@@ -20,7 +20,6 @@ public class BreakContinueTasks {
         break;
       }
       sum += i;
-      System.out.println(sum);
     }
     System.out.println(sum);
   }
@@ -36,12 +35,15 @@ public class BreakContinueTasks {
 
   public static void printPositiveNumbers() {
     Scanner scanner = new Scanner(System.in);
+    System.out.println("Введите положительные числа (для выхода введите отрицательное):");
     while (true) {
       int i = scanner.nextInt();
       if (i < 0) {
-        continue;
+        System.out.println("Завершение программы.");
+        break;
+      } else {
+        System.out.print(i + ", ");
       }
-      System.out.print(i + ", ");
     }
   }
 

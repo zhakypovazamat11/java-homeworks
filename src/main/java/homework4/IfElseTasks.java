@@ -54,7 +54,7 @@ public class IfElseTasks {
     } else if (number == 2 || number == 1) {
       System.out.println("Неудовлетворительно");
     } else {
-      System.out.println("Число неверное, ввеедите из диапазона от 1 до 5");
+      System.out.println("Число неверное, введите из диапазона от 1 до 5");
     }
   }
 

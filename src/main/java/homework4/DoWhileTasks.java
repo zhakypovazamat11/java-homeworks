@@ -63,7 +63,7 @@ public class DoWhileTasks {
       number /= 10;
       i++;
     } while (number != 0);
-    System.out.println(i);
+    System.out.println("В указанном числе кол-во цифр: " + i);
   }
 
 }

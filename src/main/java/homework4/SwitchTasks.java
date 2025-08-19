@@ -116,7 +116,7 @@ public class SwitchTasks {
 
   public static void calculatorWithSwitch() {
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Введите число от 0-100: ");
+    System.out.print("Введите 2 числа и оператор (+, -, *, /)");
     int number1 = scanner.nextInt();
     int number2 = scanner.nextInt();
     String operator = scanner.next();
@@ -133,6 +133,7 @@ public class SwitchTasks {
       case "/":
         if (number2 == 0) {
           System.out.println("Деление на ноль невозможно");
+          break;
         }
         System.out.println(number1 / number2);
         break;

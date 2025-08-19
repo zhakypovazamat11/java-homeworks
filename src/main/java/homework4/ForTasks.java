@@ -8,8 +8,8 @@ public class ForTasks {
     //printNumbersDividedBy3Before100();
     //printSumOfAllNumbers();
     //printMultiplyTable();
-    //printIsPrimeNumber();
-    printNumbersToTen();
+    printIsPrimeNumber();
+    //printNumbersToTen();
 
   }
 
@@ -46,7 +46,7 @@ public class ForTasks {
     System.out.print("Введите число: ");
     int n = scanner.nextInt();
     boolean isPrime = true;
-    for (int i = 2; i < n - 1; i++) {
+    for (int i = 2; i < Math.sqrt(n); i++) {
       if (n % i == 0) {
         isPrime = false;
         break;
