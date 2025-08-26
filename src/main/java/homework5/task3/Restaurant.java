@@ -9,7 +9,7 @@ public class Restaurant {
     this.item = item;
   }
 
-  public void printDescribtion() {
+  public void printDescription() {
     this.item.getDescription();
   }
 }

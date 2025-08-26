@@ -26,7 +26,7 @@ public class AmusementPark {
       Moderate attraction = (Moderate) this.attraction;
       attraction.info();
     } else {
-      System.out.println("Аттракцион не является экстремальным");
+      System.out.println("Аттракцион не является спокойным");
     }
   }
 

@@ -6,7 +6,7 @@ public class Main {
     HotDish item1 = new HotDish();
     Restaurant dish = new Restaurant();
     dish.addItem(item1);
-    dish.printDescribtion();
+    dish.printDescription();
 
   }
 }
