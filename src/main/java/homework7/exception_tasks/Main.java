@@ -2,6 +2,7 @@ package homework7.exception_tasks;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -15,6 +16,15 @@ public class Main {
       System.out.println("Файл открыт!");
     } catch (FileNotFoundException e) {
       System.err.println("Файл не найден");
+    } finally {
+      if (file != null) {
+        try {
+          file.close();
+        } catch (IOException e) {
+          throw new RuntimeException(e);
+        }
+        System.out.println("Файл закрыт");
+      }
     }
     // задача 2
     divide(15, 0);
@@ -34,13 +44,12 @@ public class Main {
   }
 
   public static double divide(int num1, int num2) {
-    double result = 0;
     try {
-      result = num1 / num2;
+      return num1 / num2;
     } catch (ArithmeticException e) {
       System.err.println("Ошибка при делении на ноль!!!");
+      return Double.NaN;
     }
-    return result;
   }
 
   public static void checkUserAge(int age) throws PersonalCheckedException {

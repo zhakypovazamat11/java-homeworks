@@ -25,8 +25,8 @@ public class Main {
   //Напишите дженерик метод printArray, который принимает массив элементов любого типа
   // и выводит каждый элемент массива на консоль
   public static <T> void printArray(T[] array) {
-    for (int i = 0; i < array.length; i++) {
-      System.out.println(array[i]);
+    for (T element : array) {
+      System.out.println(element);
     }
   }
 }

@@ -16,7 +16,8 @@ public class PhoneBook {
 
   public void getContact(String name) {
     System.out.println(
-        phoneBook.containsKey(name) ? phoneBook.get(name) : "Контакт не найден");
+        phoneBook.containsKey(name) ? "Контакт " + name + ": " + phoneBook.get(name)
+            : "Контакт " + name + " не найден");
   }
 
   public void printContacts() {

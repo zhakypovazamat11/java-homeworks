@@ -7,7 +7,7 @@ public class TaskForVolatile implements Runnable {
 
   @Override
   public void run() {
-    while (!stop) {
+    while (!stop && Thread.currentThread().isInterrupted()) {
       counter++;
       System.out.println("Счетчик равен: " + counter);
       try {
@@ -18,7 +18,7 @@ public class TaskForVolatile implements Runnable {
     }
   }
 
-  public void stop() {
+  public void requestStop() {
     stop = true;
     System.out.println("Вызываем стоп!");
   }

@@ -7,15 +7,9 @@ import java.util.function.Predicate;
 public class Main {
 
   public static void main(String[] args) {
-    MathOperation addition = (a, b) -> {
-      return a + b;
-    };
-    MathOperation substraction = (a, b) -> {
-      return a - b;
-    };
-    MathOperation multiplication = (a, b) -> {
-      return a * b;
-    };
+    MathOperation addition = (a, b) -> a + b;
+    MathOperation substraction = (a, b) -> a - b;
+    MathOperation multiplication = (a, b) -> a * b;
     MathOperation division = (a, b) -> {
       if (b == 0) {
         throw new ArithmeticException("Ошибка при делении на ноль!!!");

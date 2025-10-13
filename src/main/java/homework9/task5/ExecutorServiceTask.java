@@ -16,7 +16,7 @@ public class ExecutorServiceTask {
     for (int i = 1; i <= 4; i++) {
       int taskId = i;
       Callable<String> task = () -> {
-        System.out.println("Выполнения теста");
+        System.out.println("Выполнение задачи" + taskId);
         Thread.sleep(2_000);
         return "Задача " + taskId + " выполнена потоком : " + Thread.currentThread().getName();
       };

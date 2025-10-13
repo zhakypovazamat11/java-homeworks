@@ -7,7 +7,7 @@ public class Main {
     Thread t1 = new Thread(task1);
     t1.start();
     Thread.sleep(2000);
-    task1.stop();
+    task1.requestStop();
     t1.join();
   }
 

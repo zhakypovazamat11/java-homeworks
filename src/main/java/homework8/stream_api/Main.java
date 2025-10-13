@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -12,7 +13,7 @@ public class Main {
     List<String> list = Arrays.asList("Heldhfodskf", "fsdkjflsf", "fdsfds", "123", "fdsf", "fdsf",
         "Бавыавы");
     List<String> listWithFiveAndGreaterSymbols = list.stream().filter(str -> str.length() > 5)
-        .collect(Collectors.toList());
+        .toList();
     System.out.println("Фильтрация строк по длине больше 5 " + listWithFiveAndGreaterSymbols);
     List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 20, 45, 48, 555);
     List<Integer> listWithNumbersDividedByFive = numbers.stream().filter(n -> n % 5 == 0).toList();
@@ -38,8 +39,9 @@ public class Main {
     System.out.println("Сумма всеx чисел равна: " + sum);
 
     System.out.println("Поиск первого элемента, начинающегося на Б");
-    String strStartedWithB = list.stream().filter(string -> string.startsWith("Б")).findFirst()
-        .get();
+    Optional<String> result = list.stream().filter(string -> string.startsWith("Б")).findFirst();
+    String strStartedWithB;
+    strStartedWithB = result.orElse("Не найдено");
     System.out.println("Элемент начинающийся на букву Б: " + strStartedWithB);
     System.out.println("Проверка наличия хотя бы одного элемента по условию");
     boolean isListContainsEvenNumber = numbers.stream().anyMatch(num -> num % 2 == 0);

@@ -10,10 +10,7 @@ public class Main {
   //Задача 3:
   //Реализуйте метод, который принимает List<String> и возвращает Set<String> без дубликатов.
   public static Set<String> removeDuplicates(List<String> input) {
-    HashSet<String> hashSet = new HashSet<>();
-    hashSet.addAll(input);
-
-    return hashSet;
+    return new HashSet<>(input);
   }
 
   public static void main(String[] args) {

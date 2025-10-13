@@ -2,7 +2,6 @@ package homework6.arraylist_tasks;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class ArrayListTasks {
 
@@ -25,7 +24,7 @@ public class ArrayListTasks {
     System.out.println("Четные числа от 1 до 10: ");
     arraylist.forEach(number -> {
       if (number % 2 == 0) {
-        System.out.print(number + ", ");
+        System.out.print(number + " ");
       }
     });
     System.out.println();
@@ -34,12 +33,12 @@ public class ArrayListTasks {
   //Создайте ArrayList из целых чисел. Напишите программу, которая находит и выводит максимальное число из списка.
 
   public void printMaxNumberFromArrayList() {
-    AtomicInteger maxNumber = new AtomicInteger(arraylist.getFirst());
-    arraylist.forEach(number -> {
-      if (number > maxNumber.get()) {
-        maxNumber.set(number);
+    int maxNumber = arraylist.get(0);
+    for (int number : arraylist) {
+      if (number > maxNumber) {
+        maxNumber = number;
       }
-    });
+    }
     System.out.println("Максимальное число у массива: " + maxNumber);
   }
 
