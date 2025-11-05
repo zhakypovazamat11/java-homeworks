@@ -2,9 +2,9 @@ package homework12.task3;
 
 public class StudentGrade<T extends Number> {
 
-  private String studentName;
-  private String subject;
-  private T grade;
+  private final String studentName;
+  private final String subject;
+  private final T grade;
 
   public StudentGrade(String studentName, String subject, T grade) {
     this.studentName = studentName;

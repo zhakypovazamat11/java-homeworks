@@ -2,9 +2,9 @@ package homework12.task2;
 
 public class User {
 
-  private String name;
-  private int age;
-  private String email;
+  private final String name;
+  private final int age;
+  private final String email;
 
   public User(String name, int age, String email) {
     this.name = name;
