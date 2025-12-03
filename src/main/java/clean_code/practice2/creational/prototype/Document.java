@@ -7,7 +7,7 @@ class Document implements Clonable {
 
   public Document(String text, String[] images) {
     this.text = text;
-    this.images = images;  // Поверхностное копирование ссылки на массив
+    this.images = images;
   }
 
   @Override
@@ -15,6 +15,6 @@ class Document implements Clonable {
     //Глубокое копирование
     String[] imagesCopy = new String[this.images.length];
     System.arraycopy(images, 0, imagesCopy, 0, images.length);
-    return new Document(this.text, imagesCopy); // Проблемы с глубоким копированием
+    return new Document(this.text, imagesCopy);
   }
 }
