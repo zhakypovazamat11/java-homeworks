@@ -4,6 +4,8 @@ public class Main {
 
   public static void main(String[] args) {
     Bird penguin = new Penguin();
+    FlyingBird flyingBird = new FlyingBird();
+    flyingBird.fly();
   }
 
 }

@@ -5,6 +5,8 @@ public class Main {
   public static void main(String[] args) {
     Worker programmer = new Programmer();
     programmer.work();
+    Chef chef = new Chef();
+    chef.eat();
   }
 
 }
