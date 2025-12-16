@@ -11,7 +11,7 @@ public class Logger {
 
   }
 
-  public static Logger getInstance() {
+  public static synchronized Logger getInstance() {
     if (logger == null) {
       logger = new Logger();
     }

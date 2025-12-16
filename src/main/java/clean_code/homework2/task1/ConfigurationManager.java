@@ -10,7 +10,7 @@ public class ConfigurationManager {
   private ConfigurationManager() {
   }
 
-  public static ConfigurationManager getInstance() {
+  public static synchronized ConfigurationManager getInstance() {
     if (configurationManager == null) {
       configurationManager = new ConfigurationManager();
     }

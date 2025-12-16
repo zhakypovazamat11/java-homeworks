@@ -4,7 +4,6 @@ public class Main {
 
   public static void main(String[] args) {
     TransportManufacture manufacture1 = new CarManufacture();
-    manufacture1.createTransport();
     manufacture1.printManufacteredTransportInfo();
 
     TransportManufacture manufacture2 = new BicycleManufacture();

@@ -4,7 +4,7 @@ public class WindowsMenu implements Menu {
 
   @Override
   public void drawMenuElement() {
-    System.out.println("Нарисуй меню на Mac OC");
+    System.out.println("Нарисуй меню на Windows OC");
 
   }
 }
