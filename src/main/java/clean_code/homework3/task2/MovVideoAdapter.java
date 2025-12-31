@@ -7,4 +7,9 @@ public class MovVideoAdapter implements VideoAdapter {
     System.out.println("Convert video " + path + " to MP4");
     return path.replace(".mov", ".mp4");
   }
+
+  @Override
+  public String getExtension() {
+    return "mov";
+  }
 }

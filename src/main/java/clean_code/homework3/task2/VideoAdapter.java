@@ -4,4 +4,6 @@ public interface VideoAdapter {
 
   String convertToMp4(String path);
 
+  String getExtension();
+
 }

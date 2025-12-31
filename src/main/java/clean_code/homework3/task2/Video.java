@@ -2,17 +2,24 @@ package clean_code.homework3.task2;
 
 public class Video {
 
-  public static int count = 0;
-  public String id;
-  public String videoPath;
+  private static int nextId = 1;
+  private final String id;
+  private final String videoPath;
 
   public Video(String path) {
-    count++;
-    id = String.valueOf(count);
+    id = generateId();
     this.videoPath = path;
+  }
+
+  private static String generateId() {
+    return String.valueOf(nextId++);
   }
 
   public String getId() {
     return id;
+  }
+
+  public String getVideoPath() {
+    return videoPath;
   }
 }

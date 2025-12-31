@@ -12,6 +12,13 @@ public class UrlShortenerService {
 
   public String shortenUrl(String longUrl) {
     String shortUrl = strategy.shorten(longUrl);
+    String existingLongUrl = storage.getLongUrl(shortUrl);
+
+    while (existingLongUrl != null && !existingLongUrl.equals(longUrl)) {
+      String saltedLongUrl = longUrl + System.nanoTime();
+      shortUrl = strategy.shorten(saltedLongUrl);
+      existingLongUrl = storage.getLongUrl(shortUrl);
+    }
     storage.save(longUrl, shortUrl);
 
     return shortUrl;

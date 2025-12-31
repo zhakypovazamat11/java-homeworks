@@ -7,4 +7,9 @@ public class WmvVideoAdapter implements VideoAdapter {
     System.out.println("Convert video " + path + ".wmv to MP4");
     return path.replace(".wmv", ".mp4");
   }
+
+  @Override
+  public String getExtension() {
+    return "wmv";
+  }
 }

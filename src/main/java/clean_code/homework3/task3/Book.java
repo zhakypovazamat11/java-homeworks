@@ -2,21 +2,15 @@ package clean_code.homework3.task3;
 
 public class Book {
 
-  private String title;
-  private String author;
-  private String description;
-  private String content;
+  private final String title;
+  private final String author;
+  private final String description;
+  private final String content = "Content of a book: Chapter1 ...";
 
   public Book(String title, String author, String description) {
     this.title = title;
     this.author = author;
     this.description = description;
-  }
-
-  public Book(BookBuilder builder) {
-    this.title = builder.title;
-    this.author = builder.author;
-    this.description = builder.description;
   }
 
   public String getTitle() {
@@ -33,9 +27,5 @@ public class Book {
 
   public String getContent() {
     return content;
-  }
-
-  public void setContent(String content) {
-    this.content = content;
   }
 }

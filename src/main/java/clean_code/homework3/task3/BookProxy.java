@@ -10,10 +10,12 @@ public class BookProxy {
   }
 
   public String getContent() {
+    String cashedContent = "";
     if (!isLoaded) {
-      book.setContent("Content of a book: " + book.getTitle() + " by " + book.getAuthor());
+      BookContentProvider content = new BookContent();
+      cashedContent = content.loadContent(book);
       isLoaded = true;
     }
-    return book.getContent();
+    return cashedContent;
   }
 }

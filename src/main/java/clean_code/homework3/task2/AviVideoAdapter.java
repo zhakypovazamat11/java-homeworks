@@ -8,4 +8,9 @@ public class AviVideoAdapter implements VideoAdapter {
 
     return path.replace(".avi", ".mp4");
   }
+
+  @Override
+  public String getExtension() {
+    return "avi";
+  }
 }

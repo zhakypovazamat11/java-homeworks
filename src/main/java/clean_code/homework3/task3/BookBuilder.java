@@ -2,9 +2,9 @@ package clean_code.homework3.task3;
 
 public class BookBuilder {
 
-  protected String title;
-  protected String author;
-  protected String description;
+  private String title;
+  private String author;
+  private String description;
 
   public BookBuilder setTitle(String title) {
     this.title = title;
@@ -22,6 +22,6 @@ public class BookBuilder {
   }
 
   public Book build() {
-    return new Book(this);
+    return new Book(title, author, description);
   }
 }
